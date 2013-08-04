@@ -152,4 +152,6 @@ def main():
 
     mpd_add_tracks(mpd_conn,
                    args['mpd_playlist'], mpd_paths)
-main()
+
+if __name__ == "__main__":
+    main()
