@@ -17,3 +17,15 @@ Usage: nicefm.py [flag_1, ..., flag_n] KEY SECRET USERNAME
                 -p <playlist>
                 -d <duplicates> = [0-9]+(random | first | last)
 ```
+
+Example
+======
+
+Let's say we want to copy the 20 most listened albums in the last 7 days to some cellphone's music directory located in "/run/media/nc/139B-FDFD/Music/".
+
+```
+ $ nicefm.py $LASTFM_KEY $LASTFM_SECRET $LASTFM_USERNAME -t albums -i 20 -r 3month
+ $ ./sync.sh /run/media/nc/139B-FDFD/Music/
+```
+
+Boom... done...
