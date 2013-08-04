@@ -19,7 +19,7 @@ Usage: nicefm.py [flag_1, ..., flag_n] KEY SECRET USERNAME
 ```
 
 Example
-======
+=====
 
 Let's say we want to copy the 20 most listened albums in the last 7 days to some cellphone's music directory located in "/run/media/nc/139B-FDFD/Music/".
 
@@ -29,3 +29,13 @@ Let's say we want to copy the 20 most listened albums in the last 7 days to some
 ```
 
 Boom... done...
+
+Dependencies
+=====
+ * nicefm:
+    * python2
+    * python-mpd
+	* pylast (included due to a small hack in the lib)
+ * sync.sh:
+    * rsync
+
