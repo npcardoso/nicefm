@@ -7,7 +7,7 @@ import re
 import sys
 
 DEFAULT_QUERY_TYPE = 'albums'
-DEFAULT_QUERY_RANGES = '3month'
+DEFAULT_QUERY_RANGE = '3month'
 DEFAULT_MAX_ITEMS = 20
 DEFAULT_MPD_PLAYLIST = 'nicefm'
 DEFAULT_MPD_MPD_HOST = '127.0.0.1'
@@ -87,7 +87,7 @@ def help():
 def parse_args(argv):
     args = []
     ret = {}
-    ret['ranges'] = []
+    ret['range'] = DEFAULT_QUERY_RANGE
     ret['max_items'] = DEFAULT_MAX_ITEMS
     ret['query_type'] = DEFAULT_QUERY_TYPE
 
@@ -105,7 +105,7 @@ def parse_args(argv):
             if opt == '-t':
                 ret['query_type'] = val
             elif opt == '-r':
-                ret['ranges'].append(val)
+                ret['range'] = val
             elif opt == '-i':
                 ret['max_items'] = val
             elif opt == '-p':
@@ -138,7 +138,7 @@ def main():
     popular_stuff = lastfm_popular(lastfm_conn,
                                    args['lastfm_username'],
                                    args['query_type'],
-                                   args['ranges'],
+                                   args['range'],
                                    args['max_items'])
 
     mpd_conn = mpd.MPDClient()
