@@ -12,6 +12,7 @@ DEFAULT_MAX_ITEMS = 20
 DEFAULT_MPD_PLAYLIST = 'nicefm'
 DEFAULT_MPD_MPD_HOST = '127.0.0.1'
 DEFAULT_MPD_MPD_PORT = '6600'
+DEFAULT_MPD_DUPLICATES = [0, "first"]
 
 
 def lastfm_popular(lastfm, username, query_type, range, max_items):
@@ -94,6 +95,7 @@ def parse_args(argv):
     ret['mpd_playlist'] = DEFAULT_MPD_PLAYLIST
     ret['mpd_host'] = DEFAULT_MPD_MPD_HOST
     ret['mpd_port'] = DEFAULT_MPD_MPD_PORT
+    ret['mpd_duplicates'] = DEFAULT_MPD_DUPLICATES
 
     while argv:
         optlist, argv = getopt.getopt(argv, 't:r:i:p:m:d:h')
