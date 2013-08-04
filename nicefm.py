@@ -10,8 +10,8 @@ DEFAULT_QUERY_TYPE = 'albums'
 DEFAULT_QUERY_RANGE = '3month'
 DEFAULT_MAX_ITEMS = 20
 DEFAULT_MPD_PLAYLIST = 'nicefm'
-DEFAULT_MPD_MPD_HOST = '127.0.0.1'
-DEFAULT_MPD_MPD_PORT = '6600'
+DEFAULT_MPD_HOST = '127.0.0.1'
+DEFAULT_MPD_PORT = '6600'
 DEFAULT_MPD_DUPLICATES = [0, "first"]
 
 
@@ -93,8 +93,8 @@ def parse_args(argv):
     ret['query_type'] = DEFAULT_QUERY_TYPE
 
     ret['mpd_playlist'] = DEFAULT_MPD_PLAYLIST
-    ret['mpd_host'] = DEFAULT_MPD_MPD_HOST
-    ret['mpd_port'] = DEFAULT_MPD_MPD_PORT
+    ret['mpd_host'] = DEFAULT_MPD_HOST
+    ret['mpd_port'] = DEFAULT_MPD_PORT
     ret['mpd_duplicates'] = DEFAULT_MPD_DUPLICATES
 
     while argv:
